@@ -45,6 +45,9 @@ public class GameState
         this.publicPlayers = publicPlayers;
     }
 
+    public int getAgentId() {
+        return agentId;
+    }
     @Override
     public String toString()
     {
