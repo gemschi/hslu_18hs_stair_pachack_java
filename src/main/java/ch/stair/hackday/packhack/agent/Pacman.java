@@ -1,6 +1,7 @@
 package ch.stair.hackday.packhack.agent;
 
 import ch.stair.hackday.packhack.dto.Direction;
+import ch.stair.hackday.packhack.dto.GameState;
 
 public class Pacman implements Agent {
     @Override
@@ -10,7 +11,7 @@ public class Pacman implements Agent {
     }
 
     @Override
-    public Direction chooseAction() {
+    public Direction chooseAction(GameState gameField) {
         //TODO: Implement the agentlogik in here.
         float randomBetween0AndSize = (float)Math.random() * (Direction.values().length-1);
         int randomIndex = Math.round(randomBetween0AndSize);
