@@ -2,6 +2,7 @@ package ch.stair.hackday.packhack.agent;
 
 import ch.stair.hackday.packhack.dto.Direction;
 import ch.stair.hackday.packhack.dto.GameState;
+import ch.stair.hackday.packhack.dto.PublicPlayer;
 
 public class Pacman implements Agent {
     @Override
