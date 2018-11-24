@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class GameState
 {
-    private FieldTypes[][] gameField;
+    private static FieldTypes[][] gameField;
     private PublicPlayer[] publicPlayers;
     private int agentId;
 
@@ -53,4 +53,19 @@ public class GameState
     {
         return "ClassPojo [gameField = "+gameField+", publicPlayers = "+publicPlayers+"]";
     }
+
+    public static String getEnemyPosition(){
+        String enemyDescr = "FOOD";
+        String enemyIn = null;
+            FieldTypes[][] test = gameField;
+            for(int i=0; i<test.length; i++) {
+                for (int j = 0; j < test[i].length; j++) {
+                    System.out.println (test[i][j].name ());
+                    if(test[i][j].name ().equals (enemyDescr))
+                        enemyIn = "x"+ i + "y"+j;
+                }
+            }
+            return enemyIn;
+    }
+
 }

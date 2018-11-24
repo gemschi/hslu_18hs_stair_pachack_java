@@ -15,7 +15,8 @@ public class Pacman implements Agent {
     @Override
     public Direction chooseAction(GameState gameField) {
         //TODO: Implement the Agentlogic in here.
-
+        String enemyIn = GameState.getEnemyPosition ();
+        System.out.println (enemyIn);
         float randomBetween0AndSize = (float)Math.random() * (Direction.values().length-1);
         int randomIndex = Math.round(randomBetween0AndSize);
         return Direction.values()[randomIndex];
